@@ -9,7 +9,6 @@ This Privacy Policy describes how Gitlab Tags Feed Readme Generator collects, us
 We do not collect any personal information about you when you use the App. However, we do collect information about the pages you visit while using the App. This information includes the following:
 - The content of the page
 
-
 ## Who We Share Your Personal Information With
 
 We do not share your personal information with any third parties.

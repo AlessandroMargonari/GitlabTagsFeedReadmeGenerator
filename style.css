@@ -4,6 +4,7 @@
     --gray: #2A2A38;
     --lightGray: #8F8E97;
     --green: #00DB76;
+    --transition-time: 0.3s;
 }
 body{
     margin: 0;
@@ -30,11 +31,20 @@ h3:hover{
     background-color: var(--white);
     border: 2px solid var(--green);
     color: var(--green);
-    transition: 0.2s;
+    transition: var(--transition-time);
 }
 .number{
     font-size: 25px;
     margin-right: 20px;
+}
+.download{
+    margin-left: 25px;
+    font-size: small;
+    color: var(--white);
+}
+.download:hover{
+    color: var(--green);
+    transition: var(--transition-time);
 }
 
 .page-container{
@@ -56,6 +66,11 @@ h3:hover{
     background-color: var(--gray);
     color: var(--white);
     border-bottom: 2px solid var(--white);
+}
+.title_text{
+    display: inline-flex;
+    align-items: center;
+    margin-left: 30px;
 }
 
 .content{
@@ -126,9 +141,9 @@ h3:hover{
     border: none;
     cursor: pointer;
     padding: 5px;
-    width: 50%;
+    width: 33.33%;
     float: left;
-    transition: 0.3s;
+    transition: var(--transition-time);
     font-family: 'Spartan', sans-serif;
     color: var(--white);
     padding: 10px;
@@ -153,6 +168,9 @@ h3:hover{
     border-radius: 15px;
     border: 2px solid var(--green);
     margin-left: 15px;
+    display: block;
+    max-width: fit-content;
+    float: right;
 }
 
 .btn-readme:hover{

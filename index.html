@@ -4,25 +4,80 @@
         <title>Guide</title>
         <link href = "style.css" rel = "stylesheet" type = "text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     </head>
     <body>
         <div>
             <section class="title">
-                <h1>Readme generator for Gitlab Tags</h1>
+                <div class="title_text">
+                    <img src="images/icon-128-noBg.png">
+                    <h1 class="title_text">Readme generator from Tags<a class="download" target="_blank" href="https://chromewebstore.google.com/detail/readme-generator-for-gitl/hgppfcfonncghdmjmpebopjeclphdopo?hl=it"><i class="fa fa-arrow-down"></i> Open in marketplace</a></h1>    
+                </div>
                 <div class="line-white"></div>
                 <div class="tab">
-                    <button class="tablinks" id="generateTab">Guide</button>
-                    <button class="tablinks" id="formatTab">Privacy</button>
+                    <button class="tablinks" id="newsTab">News</button>
+                    <button class="tablinks" id="guideTab">Guide</button>
+                    <button class="tablinks" id="privacyTab">Privacy</button>
                 </div>
             </section>
+
+            <!--NEWS-->
+            <div class="page_container hidden" id="news" class="tabcontent">
+                <section class="page-container">
+                    <!--
+                    <section class="content-container">
+                        <a href="#1.3.0"><h3 id="1.3.0"><span class="number">Version</span>1.3.0</h3></a>
+                        <section class="content-section">
+                            <p>Added generation for github tags</p>
+                            <p>Changed redirect for help, from image to website</p>
+                        </section>
+                    </section>
+                    -->
+                    <section class="content-container">
+                        <a href="#1.2.1"><h3 id="1.2.1"><span class="number">Version</span>1.2.1</h3></a>
+                        <section class="content-section">
+                            <p>Added guide and privacy button</p>
+                        </section>
+                    </section>
+                    <section class="content-container">
+                        <a href="#1.2.0"><h3 id="1.2.0"><span class="number">Version</span>1.2.0</h3></a>
+                        <section class="content-section">
+                            <p>Added tab for formatting a markdown file</p>
+                        </section>
+                    </section>
+                    <section class="content-container">
+                        <a href="#1.1.1"><h3 id="1.1.1"><span class="number">Version</span>1.1.1</h3></a>
+                        <section class="content-section">
+                            <p>Changed the description on the extension page</p>
+                        </section>
+                    </section>
+                    <section class="content-container">
+                        <a href="#1.1.0"><h3 id="1.1.0"><span class="number">Version</span>1.1.0</h3></a>
+                        <section class="content-section">
+                            <p>Removed url control during the generation</p>
+                        </section>
+                    </section>
+                    <section class="content-container">
+                        <a href="#1.0.0"><h3 id="1.0.0"><span class="number">Version</span>1.0.0</h3></a>
+                        <section class="content-section">
+                            <p>Initial release</p>
+                        </section>
+                    </section>
+                </section>
+            </div>
             
+            <!--GUIDE-->
             <div class="page_container" id="guide" class="tabcontent">
                 <section class="page-container">
                     <section class="content-container">
                         <a href="#how_to_start"><h3 id="how_to_start"><span class="number">1.</span>How to start</h3></a>
                         <section class="content-section inline">
-                            <img src="images/tags.png">
-                            <img src="images/tags-feed.png">
+                            <div class="image_container">
+                                <img src="images/tags.png">
+                                <img src="images/tags-feed.png">
+                            </div>
                             <div class="description">
                                 <p>From the project page, open the tags page</p>
                                 <p>The generation can also be done from the feed tags page</p>
@@ -57,6 +112,7 @@
                 </section>
             </div>
             
+            <!--PRIVACY -->
             <div class="page_container hidden" id="privacy" class="tabcontent">
                 <section class="page-container">
                     <a href="#privacy"><h3 id="privacy">Privacy Policy</h3></a>
@@ -81,12 +137,20 @@
         </div>
     </body>
     <script>
-        document.getElementById('generateTab').addEventListener('click', function() {
+        document.getElementById('newsTab').addEventListener('click', function() {
+            document.getElementById('news').classList.remove('hidden');
+            document.getElementById('guide').classList.add('hidden');
+            document.getElementById('privacy').classList.add('hidden');
+        });
+
+        document.getElementById('guideTab').addEventListener('click', function() {
+            document.getElementById('news').classList.add('hidden');
             document.getElementById('guide').classList.remove('hidden');
             document.getElementById('privacy').classList.add('hidden');
         });
 
-        document.getElementById('formatTab').addEventListener('click', function() {
+        document.getElementById('privacyTab').addEventListener('click', function() {
+            document.getElementById('news').classList.add('hidden');
             document.getElementById('guide').classList.add('hidden');
             document.getElementById('privacy').classList.remove('hidden');
         });
